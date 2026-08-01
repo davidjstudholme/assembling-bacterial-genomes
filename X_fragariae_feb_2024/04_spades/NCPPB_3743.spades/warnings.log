@@ -1,0 +1,4 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:08.105    45M / 2108M WARN    General                 (pair_info_count.cpp       : 376)   Estimated mean insert size 292.089 is very small compared to read length 301
+======= Warnings saved to /data/djs217/PROJECTS/10_X_fragariae_feb_2024/04_spades/NCPPB_3743.spades/warnings.log

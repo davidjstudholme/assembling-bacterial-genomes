@@ -1,0 +1,161 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./NCPPB_2473.1.fq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.7
+Cutadapt version: 3.5
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 30
+Quality encoding type selected: ASCII+33
+Using Nextera adapter for trimming (count: 1303). Second best hit was smallRNA (count: 11)
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 3.5 with Python 3.10.12
+Command line parameters: -j 1 -e 0.1 -q 30 -O 1 -a CTGTCTCTTATA ./NCPPB_2473.1.fq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 22.58 s (49 µs/read; 1.22 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 458,582
+Reads with adapters:                   228,508 (49.8%)
+Reads written (passing filters):       458,582 (100.0%)
+
+Total basepairs processed:   100,996,407 bp
+Quality-trimmed:              11,282,243 bp (11.2%)
+Total written (filtered):     89,409,808 bp (88.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 228508 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.1%
+  C: 25.7%
+  G: 36.7%
+  T: 14.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	202930	114645.5	0	202930
+2	15327	28661.4	0	15327
+3	7999	7165.3	0	7999
+4	834	1791.3	0	834
+5	464	447.8	0	464
+6	93	112.0	0	93
+7	48	28.0	0	48
+8	33	7.0	0	33
+9	22	1.7	0	21 1
+10	21	0.4	1	14 7
+11	14	0.1	1	11 3
+12	11	0.0	1	8 3
+13	31	0.0	1	15 16
+14	11	0.0	1	4 7
+15	20	0.0	1	6 14
+16	27	0.0	1	7 20
+17	12	0.0	1	6 6
+18	16	0.0	1	0 16
+19	6	0.0	1	2 4
+20	8	0.0	1	4 4
+21	10	0.0	1	3 7
+22	6	0.0	1	2 4
+24	2	0.0	1	0 2
+25	4	0.0	1	1 3
+26	11	0.0	1	5 6
+27	6	0.0	1	0 6
+28	9	0.0	1	3 6
+29	14	0.0	1	7 7
+30	11	0.0	1	4 7
+31	8	0.0	1	3 5
+32	3	0.0	1	0 3
+34	5	0.0	1	2 3
+35	3	0.0	1	1 2
+36	10	0.0	1	4 6
+37	6	0.0	1	1 5
+38	9	0.0	1	7 2
+39	9	0.0	1	1 8
+40	8	0.0	1	3 5
+41	11	0.0	1	6 5
+42	9	0.0	1	4 5
+43	11	0.0	1	4 7
+44	18	0.0	1	7 11
+45	13	0.0	1	3 10
+46	17	0.0	1	9 8
+47	1	0.0	1	0 1
+49	1	0.0	1	0 1
+50	4	0.0	1	1 3
+51	4	0.0	1	2 2
+52	2	0.0	1	1 1
+53	2	0.0	1	1 1
+54	1	0.0	1	0 1
+55	4	0.0	1	3 1
+56	5	0.0	1	1 4
+57	10	0.0	1	4 6
+58	6	0.0	1	3 3
+59	7	0.0	1	3 4
+60	5	0.0	1	3 2
+61	2	0.0	1	2
+62	1	0.0	1	1
+63	2	0.0	1	1 1
+64	5	0.0	1	1 4
+65	4	0.0	1	2 2
+66	10	0.0	1	6 4
+67	8	0.0	1	4 4
+68	8	0.0	1	4 4
+69	9	0.0	1	4 5
+70	7	0.0	1	2 5
+71	11	0.0	1	8 3
+72	13	0.0	1	4 9
+73	11	0.0	1	5 6
+74	12	0.0	1	6 6
+75	16	0.0	1	13 3
+76	20	0.0	1	13 7
+77	78	0.0	1	43 35
+78	19	0.0	1	5 14
+79	43	0.0	1	26 17
+80	3	0.0	1	2 1
+81	1	0.0	1	0 1
+95	1	0.0	1	0 1
+96	1	0.0	1	0 1
+97	1	0.0	1	0 1
+101	2	0.0	1	0 2
+106	2	0.0	1	0 2
+111	2	0.0	1	0 2
+132	1	0.0	1	0 1
+142	1	0.0	1	0 1
+157	1	0.0	1	0 1
+160	1	0.0	1	0 1
+162	1	0.0	1	0 1
+172	1	0.0	1	0 1
+174	1	0.0	1	0 1
+178	1	0.0	1	0 1
+183	1	0.0	1	0 1
+187	1	0.0	1	0 1
+188	2	0.0	1	0 2
+192	2	0.0	1	0 2
+198	1	0.0	1	0 1
+200	1	0.0	1	0 1
+217	1	0.0	1	0 1
+220	1	0.0	1	0 1
+225	1	0.0	1	0 1
+231	1	0.0	1	0 1
+232	1	0.0	1	0 1
+253	1	0.0	1	0 1
+260	1	0.0	1	0 1
+274	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: ./NCPPB_2473.1.fq.gz
+=============================================
+458582 sequences processed in total
+

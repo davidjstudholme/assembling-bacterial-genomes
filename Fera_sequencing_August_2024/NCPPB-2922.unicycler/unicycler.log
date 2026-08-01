@@ -1,0 +1,198 @@
+Error: could not find /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/short_reads_2.fastq.gz
+
+
+
+
+
+
+
+
+
+
+
+
+
+Starting Unicycler (2024-08-20 20:42:03)
+----------------------------------------
+    Welcome to Unicycler, an assembly pipeline for bacterial genomes. Since you provided only short reads, Unicycler will essentially function as a SPAdes-optimiser. It will try many k-mer sizes, choose the best based on contig length and graph connectivity, and scaffold the graph using SPAdes repeat resolution.
+    For more information, please see https://github.com/rrwick/Unicycler
+
+Command: /data/djs217/Unicycler-0.5.1/unicycler-runner.py -1 NCPPB-2922_S21_L001_R1_001_val_1.fq.gz -2 NCPPB-2922_S21_L001_R2_001_val_2.fq.gz -o NCPPB-2922.unicycler
+
+Unicycler version: v0.5.1
+Using 8 threads
+
+The output directory already exists and files may be reused or overwritten:
+  /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler
+
+Dependencies:
+  Program       Version   Status  
+  spades.py     4.0.0     good    
+  racon                   not used
+  makeblastdb   2.12.0+   good    
+  tblastn       2.12.0+   good    
+
+
+Choosing k-mer range for assembly (2024-08-20 20:42:14)
+-------------------------------------------------------
+    Unicycler chooses a k-mer range for SPAdes based on the length of the input reads. It uses a wide range of many k-mer sizes to maximise the chance of finding an ideal assembly.
+
+SPAdes maximum k-mer: 127
+Median read length: 221
+K-mer range: 27, 53, 71, 87, 99, 111, 119, 127
+
+
+SPAdes assemblies (2024-08-20 20:42:20)
+---------------------------------------
+    Unicycler now uses SPAdes to assemble the short reads. It scores the assembly graph for each k-mer using the number of contigs (fewer is better) and the number of dead ends (fewer is better). The score function is 1/(c*(d+2)), where c is the contig count and d is the dead end count.
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27 --threads 8 --gfa11 --isolate -1 /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922_S21_L001_R1_001_val_1.fq.gz -2 /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922_S21_L001_R2_001_val_2.fq.gz -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53 --threads 8 --gfa11 --restart-from k27 -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53,71 --threads 8 --gfa11 --restart-from k53 -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53,71,87 --threads 8 --gfa11 --restart-from k71 -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53,71,87,99 --threads 8 --gfa11 --restart-from k87 -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53,71,87,99,111 --threads 8 --gfa11 --restart-from k99 -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53,71,87,99,111,119 --threads 8 --gfa11 --restart-from k111 -m 1024
+
+spades.py -o /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly -k 27,53,71,87,99,111,119,127 --threads 8 --gfa11 --restart-from k119 -m 1024
+
+K-mer   Contigs   Dead ends   Score      
+   27                         too complex
+   53       732          11      1.05e-04
+   71       465          14      1.34e-04
+   87       298          14      2.10e-04
+   99       252          15      2.33e-04
+  111       198          14      3.16e-04
+  119       180          14      3.47e-04
+  127       171          14      3.65e-04 ← best
+
+Read depth filter: removed 2 contigs totalling 748 bp
+Deleting /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/spades_assembly/
+
+
+Determining graph multiplicity (2024-08-20 20:55:42)
+----------------------------------------------------
+    Multiplicity is the number of times a sequence occurs in the underlying sequence. Single-copy contigs (those with a multiplicity of one, occurring only once in the underlying sequence) are particularly useful.
+
+Saving /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/002_depth_filter.gfa
+
+
+Cleaning graph (2024-08-20 20:55:42)
+------------------------------------
+    Unicycler now performs various cleaning procedures on the graph to remove overlaps and simplify the graph structure. The end result is a graph ready for bridging.
+
+Graph overlaps removed
+
+Removed zero-length segments:
+    101, 103, 106, 108, 109, 111, 115, 117, 122, 127, 130, 166
+
+Merged small segments:
+    141, 143, 147, 148, 150, 152, 156, 157, 158, 159, 161, 162, 163, 164, 165, 167, 168
+
+Saving /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/003_overlaps_removed.gfa
+
+    Unicycler now selects a set of anchor contigs from the single-copy contigs. These are the contigs which will be connected via bridges to form the final assembly.
+
+59 anchor segments (4,803,837 bp) out of 142 total segments (4,953,409 bp)
+
+
+Creating SPAdes contig bridges (2024-08-20 20:55:42)
+----------------------------------------------------
+    SPAdes uses paired-end information to perform repeat resolution (RR) and produce contigs from the assembly graph. SPAdes saves the graph paths corresponding to these contigs in the contigs.paths file. When one of these paths contains two or more anchor contigs, Unicycler can create a bridge from the path.
+
+                                                         Bridge
+Start                    Path                   End     quality
+    2                    103                    37         63.1
+    3                 -80 → -80                 -6         24.1
+    8                    101                    55         61.9
+    9   100 → -95 → 105 → 72 → 100 → 96 → 105   -44         5.9
+   12                    102                    -55        60.5
+   15                    -103                   -28        63.2
+   16              -84 → -73 → -84              -54        13.4
+   17                    107                    -27        63.1
+   19                     71                    -57        21.1
+   21                  92 → 92                  -53        35.0
+   23              -106 → 66 → -106             22          9.1
+   26                    -88                    14         63.2
+   29          97 → 70 → 101 → 61 → 87          19          7.6
+   33                    -88                    35         62.5
+   35                    -71                    57         20.6
+   36               77 → -67 → 77               -45         7.8
+   37                    -107                   50         61.1
+   39                    -102                   54         63.2
+   40                  85 → 85                  15         32.7
+   50               99 → -108 → 99              40         21.4
+
+
+Creating loop unrolling bridges (2024-08-20 20:55:42)
+-----------------------------------------------------
+    When a SPAdes contig path connects an anchor contig with the middle contig of a simple loop, Unicycler concludes that the sequences are contiguous (i.e. the loop is not a separate piece of DNA). It then uses the read depth of the middle and repeat contigs to guess the number of times to traverse the loop and makes a bridge.
+
+                                  Loop count   Loop count    Loop    Bridge
+Start   Repeat   Middle     End    by repeat    by middle   count   quality
+    5     -104      126       1         0.14         0.42       1      19.3
+  -40      -99      108     -50         0.00         0.40       1      18.7
+   45      -77       67     -36         1.61         1.12       1      32.0
+   54       84       73     -16         1.16         1.10       1      38.9
+   23     -106       66      22         1.39         1.00       1      43.5
+
+
+Applying bridges (2024-08-20 20:55:42)
+--------------------------------------
+    Unicycler now applies to the graph in decreasing order of quality. This ensures that when multiple, contradictory bridges exist, the most supported option is used.
+
+Bridge type   Start → end   Path              Quality
+SPAdes           39 → 54    -102               63.244
+SPAdes           15 → -28   -103               63.242
+SPAdes           26 → 14    -88                63.195
+SPAdes           17 → -27   107                63.106
+SPAdes            2 → 37    103                63.103
+SPAdes           33 → 35    -88                62.535
+SPAdes            8 → 55    101                61.869
+SPAdes           37 → 50    -107               61.124
+SPAdes           12 → -55   102                60.481
+SPAdes           21 → -53   92, 92             35.009
+SPAdes           40 → 15    85, 85             32.746
+SPAdes            3 → -6    -80, -80           24.133
+SPAdes           50 → 40    99, -108, 99       21.389
+SPAdes           19 → -57   71                 21.116
+SPAdes           35 → 57    -71                20.567
+SPAdes           16 → -54   -84, -73, -84      13.379
+loop             23 → 22    -106, 66, -106     43.525
+loop             45 → -36   -77, 67, -77       32.028
+loop              5 → 1     -104, 126, -104    19.337
+
+Saving /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/004_bridges_applied.gfa
+
+
+Bridged assembly graph (2024-08-20 20:55:43)
+--------------------------------------------
+    The assembly is now mostly finished and no more structural changes will be made. Ideally the assembly graph should now have one contig per replicon and no erroneous contigs (i.e. a complete assembly). If there are more contigs, then the assembly is not complete.
+
+Saving /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/005_final_clean.gfa
+
+Component   Segments   Links   Length      N50       Longest segment   Status    
+    total        103     140   4,957,214   183,992           574,226             
+        1        102     139   4,919,315   183,992           574,226   incomplete
+        2          1       1      37,899    37,899            37,899     complete
+
+
+Rotating completed replicons (2024-08-20 20:55:43)
+--------------------------------------------------
+    Any completed circular contigs (i.e. single contigs which have one link connecting end to start) can have their start position changed without altering the sequence. For consistency, Unicycler now searches for a starting gene (dnaA or repA) in each such contig, and if one is found, the contig is rotated to start with that gene on the forward strand.
+
+Segment   Length   Depth   Starting gene   Position   Strand   Identity   Coverage
+     30   37,899   1.46x   none found                                             
+
+
+Assembly complete (2024-08-20 20:56:04)
+---------------------------------------
+Saving /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/assembly.gfa
+Saving /data/djs217/PROJECTS/26_Fera_sequencing_August_2024/NCPPB-2922.unicycler/assembly.fasta
+

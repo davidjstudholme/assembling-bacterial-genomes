@@ -1,0 +1,136 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./NCPPB_4181.2.fq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.7
+Cutadapt version: 3.5
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 30
+Quality encoding type selected: ASCII+33
+Using Nextera adapter for trimming (count: 1112). Second best hit was smallRNA (count: 14)
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 3.5 with Python 3.10.12
+Command line parameters: -j 1 -e 0.1 -q 30 -O 1 -a CTGTCTCTTATA ./NCPPB_4181.2.fq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 21.52 s (45 µs/read; 1.34 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 479,264
+Reads with adapters:                   219,602 (45.8%)
+Reads written (passing filters):       479,264 (100.0%)
+
+Total basepairs processed:   124,772,844 bp
+Quality-trimmed:              47,368,295 bp (38.0%)
+Total written (filtered):     77,126,712 bp (61.8%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 219602 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 18.3%
+  C: 25.7%
+  G: 40.7%
+  T: 14.6%
+  none/other: 0.6%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	191438	119816.0	0	191438
+2	16978	29954.0	0	16978
+3	8867	7488.5	0	8867
+4	1083	1872.1	0	1083
+5	523	468.0	0	523
+6	57	117.0	0	57
+7	34	29.3	0	34
+8	29	7.3	0	29
+9	33	1.8	0	33
+10	35	0.5	1	31 4
+11	23	0.1	1	21 2
+12	24	0.0	1	20 4
+13	39	0.0	1	27 12
+14	13	0.0	1	7 6
+15	27	0.0	1	14 13
+16	14	0.0	1	5 9
+17	14	0.0	1	4 10
+18	12	0.0	1	4 8
+19	8	0.0	1	3 5
+20	1	0.0	1	0 1
+21	12	0.0	1	5 7
+22	5	0.0	1	3 2
+23	12	0.0	1	5 7
+24	5	0.0	1	3 2
+25	4	0.0	1	0 4
+26	9	0.0	1	3 6
+27	8	0.0	1	4 4
+28	16	0.0	1	9 7
+29	14	0.0	1	6 8
+30	9	0.0	1	2 7
+31	10	0.0	1	4 6
+32	6	0.0	1	0 6
+33	10	0.0	1	4 6
+34	6	0.0	1	1 5
+35	15	0.0	1	5 10
+36	9	0.0	1	8 1
+37	13	0.0	1	7 6
+38	10	0.0	1	2 8
+39	14	0.0	1	2 12
+40	16	0.0	1	7 9
+41	12	0.0	1	4 8
+42	13	0.0	1	9 4
+43	13	0.0	1	9 4
+44	22	0.0	1	14 8
+45	22	0.0	1	10 12
+46	18	0.0	1	10 8
+47	6	0.0	1	3 3
+48	5	0.0	1	2 3
+50	2	0.0	1	0 2
+51	2	0.0	1	0 2
+64	1	0.0	1	0 1
+72	1	0.0	1	0 1
+73	1	0.0	1	0 1
+74	1	0.0	1	0 1
+75	1	0.0	1	0 1
+76	1	0.0	1	1
+77	1	0.0	1	0 1
+78	1	0.0	1	0 1
+80	1	0.0	1	0 1
+82	1	0.0	1	0 1
+83	2	0.0	1	0 2
+91	1	0.0	1	0 1
+93	1	0.0	1	0 1
+96	2	0.0	1	0 2
+102	1	0.0	1	0 1
+108	1	0.0	1	0 1
+111	1	0.0	1	0 1
+112	1	0.0	1	0 1
+121	2	0.0	1	0 2
+124	1	0.0	1	0 1
+131	2	0.0	1	0 2
+141	1	0.0	1	0 1
+143	1	0.0	1	0 1
+149	1	0.0	1	0 1
+151	1	0.0	1	0 1
+156	1	0.0	1	0 1
+191	1	0.0	1	0 1
+195	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: ./NCPPB_4181.2.fq.gz
+=============================================
+479264 sequences processed in total
+
+Total number of sequences analysed for the sequence pair length validation: 479264
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 30495 (6.36%)

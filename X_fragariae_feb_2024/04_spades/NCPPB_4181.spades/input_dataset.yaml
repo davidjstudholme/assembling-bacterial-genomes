@@ -1,0 +1,7 @@
+- "left reads":
+  - "/data/djs217/PROJECTS/10_X_fragariae_feb_2024/04_spades/NCPPB_4181.1_val_1.fq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/data/djs217/PROJECTS/10_X_fragariae_feb_2024/04_spades/NCPPB_4181.2_val_2.fq.gz"
+  "type": "paired-end"

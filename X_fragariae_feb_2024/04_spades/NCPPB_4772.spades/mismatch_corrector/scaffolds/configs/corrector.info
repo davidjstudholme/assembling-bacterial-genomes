@@ -1,0 +1,7 @@
+"bwa": "/data/djs217/anaconda3/envs/spades-env/bin/spades-bwa"
+"dataset": "/data/djs217/PROJECTS/10_X_fragariae_feb_2024/04_spades/NCPPB_4772.spades/input_dataset.yaml"
+"log_filename": "log.properties"
+"max_nthreads": !!int "16"
+"output_dir": "/data/djs217/PROJECTS/10_X_fragariae_feb_2024/04_spades/NCPPB_4772.spades/mismatch_corrector/scaffolds"
+"strategy": "mapped_squared"
+"work_dir": "/data/djs217/PROJECTS/10_X_fragariae_feb_2024/04_spades/NCPPB_4772.spades/tmp/corrector_gx7sws1m"
