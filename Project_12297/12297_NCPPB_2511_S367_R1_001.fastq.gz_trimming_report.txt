@@ -1,0 +1,205 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: 12297_NCPPB_2511_S367_R1_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.10
+Cutadapt version: 4.4
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 30
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 169). Second best hit was Nextera (count: 0)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 4.4 with Python 3.12.3
+Command line parameters: -j 1 -e 0.1 -q 30 -O 1 -a AGATCGGAAGAGC 12297_NCPPB_2511_S367_R1_001.fastq.gz
+Processing single-end reads on 1 core ...
+Finished in 317.590 s (30.438 µs/read; 1.97 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              10,434,172
+Reads with adapters:                   934,707 (9.0%)
+Reads written (passing filters):    10,434,172 (100.0%)
+
+Total basepairs processed: 1,544,530,255 bp
+Quality-trimmed:               8,019,692 bp (0.5%)
+Total written (filtered):  1,534,278,784 bp (99.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 934707 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 30.6%
+  C: 29.5%
+  G: 24.5%
+  T: 14.7%
+  none/other: 0.7%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	804023	2608543.0	0	804023
+2	60728	652135.8	0	60728
+3	44268	163033.9	0	44268
+4	11212	40758.5	0	11212
+5	3532	10189.6	0	3532
+6	1137	2547.4	0	1137
+7	75	636.9	0	75
+8	7	159.2	0	7
+9	46	39.8	0	18 28
+10	70	10.0	1	5 65
+11	33	2.5	1	0 33
+12	31	0.6	1	0 31
+13	7	0.2	1	5 2
+14	34	0.2	1	5 29
+15	25	0.2	1	9 16
+16	37	0.2	1	10 27
+17	21	0.2	1	2 19
+18	38	0.2	1	11 27
+19	33	0.2	1	12 21
+20	32	0.2	1	13 19
+21	62	0.2	1	25 37
+22	33	0.2	1	15 18
+23	18	0.2	1	9 9
+24	42	0.2	1	18 24
+25	28	0.2	1	7 21
+26	36	0.2	1	16 20
+27	85	0.2	1	50 35
+28	25	0.2	1	9 16
+29	41	0.2	1	26 15
+30	34	0.2	1	10 24
+31	74	0.2	1	46 28
+32	28	0.2	1	13 15
+33	50	0.2	1	36 14
+34	66	0.2	1	35 31
+35	32	0.2	1	11 21
+36	71	0.2	1	45 26
+37	37	0.2	1	21 16
+38	75	0.2	1	51 24
+39	44	0.2	1	20 24
+40	47	0.2	1	33 14
+41	78	0.2	1	33 45
+42	39	0.2	1	17 22
+43	181	0.2	1	75 106
+44	124	0.2	1	74 50
+45	411	0.2	1	299 112
+46	47	0.2	1	33 14
+47	279	0.2	1	197 82
+48	32	0.2	1	14 18
+49	98	0.2	1	65 33
+50	9	0.2	1	6 3
+51	29	0.2	1	10 19
+52	13	0.2	1	0 13
+53	13	0.2	1	1 12
+54	5	0.2	1	0 5
+55	10	0.2	1	1 9
+56	11	0.2	1	0 11
+57	17	0.2	1	3 14
+58	11	0.2	1	4 7
+59	8	0.2	1	1 7
+60	12	0.2	1	2 10
+61	7	0.2	1	0 7
+62	15	0.2	1	2 13
+63	13	0.2	1	0 13
+64	8	0.2	1	1 7
+65	5	0.2	1	1 4
+66	4	0.2	1	0 4
+67	3	0.2	1	0 3
+68	11	0.2	1	0 11
+69	3	0.2	1	0 3
+70	4	0.2	1	0 4
+71	18	0.2	1	0 18
+72	10	0.2	1	0 10
+73	8	0.2	1	0 8
+74	5	0.2	1	0 5
+75	10	0.2	1	0 10
+76	7	0.2	1	0 7
+77	8	0.2	1	0 8
+78	5	0.2	1	0 5
+79	4	0.2	1	0 4
+80	4	0.2	1	0 4
+81	6	0.2	1	0 6
+82	15	0.2	1	0 15
+83	8	0.2	1	0 8
+84	7	0.2	1	1 6
+85	9	0.2	1	1 8
+86	6	0.2	1	0 6
+87	13	0.2	1	2 11
+88	1	0.2	1	0 1
+89	18	0.2	1	2 16
+90	10	0.2	1	1 9
+91	10	0.2	1	2 8
+92	12	0.2	1	3 9
+93	8	0.2	1	1 7
+94	10	0.2	1	5 5
+95	14	0.2	1	3 11
+96	16	0.2	1	7 9
+97	7	0.2	1	3 4
+98	9	0.2	1	5 4
+99	11	0.2	1	3 8
+100	12	0.2	1	3 9
+101	19	0.2	1	12 7
+102	16	0.2	1	6 10
+103	17	0.2	1	7 10
+104	8	0.2	1	4 4
+105	27	0.2	1	3 24
+106	15	0.2	1	6 9
+107	18	0.2	1	9 9
+108	22	0.2	1	5 17
+109	8	0.2	1	5 3
+110	12	0.2	1	6 6
+111	17	0.2	1	5 12
+112	13	0.2	1	3 10
+113	17	0.2	1	7 10
+114	14	0.2	1	5 9
+115	9	0.2	1	5 4
+116	27	0.2	1	13 14
+117	11	0.2	1	2 9
+118	13	0.2	1	3 10
+119	14	0.2	1	7 7
+120	12	0.2	1	2 10
+121	14	0.2	1	1 13
+122	11	0.2	1	3 8
+123	10	0.2	1	3 7
+124	7	0.2	1	3 4
+125	12	0.2	1	6 6
+126	10	0.2	1	2 8
+127	4	0.2	1	1 3
+128	7	0.2	1	1 6
+129	14	0.2	1	4 10
+130	10	0.2	1	1 9
+131	9	0.2	1	3 6
+132	11	0.2	1	1 10
+133	15	0.2	1	2 13
+134	5	0.2	1	0 5
+135	12	0.2	1	1 11
+136	6	0.2	1	0 6
+137	5	0.2	1	2 3
+138	18	0.2	1	1 17
+139	9	0.2	1	1 8
+140	10	0.2	1	2 8
+141	6	0.2	1	1 5
+142	9	0.2	1	1 8
+143	15	0.2	1	2 13
+144	12	0.2	1	3 9
+145	8	0.2	1	1 7
+146	13	0.2	1	3 10
+147	29	0.2	1	6 23
+148	34	0.2	1	2 32
+149	219	0.2	1	2 217
+150	5756	0.2	1	1 5755
+
+RUN STATISTICS FOR INPUT FILE: 12297_NCPPB_2511_S367_R1_001.fastq.gz
+=============================================
+10434172 sequences processed in total
+

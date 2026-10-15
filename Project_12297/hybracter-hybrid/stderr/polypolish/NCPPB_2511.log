@@ -1,0 +1,57 @@
+
+[1;4;93mStarting Polypolish polish[0m [2m(2026-10-14 20:14:56)[0m
+[2m    Polypolish is a tool for polishing genome assemblies with short reads.
+Unlike other tools in this category, Polypolish uses SAM files where each read
+has been aligned to all possible locations (not just a single best location).
+This allows it to repair errors in repeat regions that other alignment-based
+polishers cannot fix.[0m
+
+Polypolish version: 0.6.1
+
+Input assembly:
+  hybracter-hybrid/processing/complete/medaka_rd_2/NCPPB_2511/consensus.fasta
+
+Input short-read alignments:
+  hybracter-hybrid/processing/complete/bwa/NCPPB_2511_1.sam
+  hybracter-hybrid/processing/complete/bwa/NCPPB_2511_2.sam
+
+Settings:
+  --fraction_invalid 0.2
+  --fraction_valid 0.5
+  --max_errors 10
+  --min_depth 5
+  not logging debugging information
+
+
+[1;4;93mLoading assembly[0m [2m(2026-10-14 20:14:56)[0m
+contig_1 (5,167,647 bp)
+
+
+[1;4;93mLoading alignments[0m [2m(2026-10-14 20:14:56)[0m
+hybracter-hybrid/processing/complete/bwa/NCPPB_2511_1.sam: 3,849,735 alignments from 3,076,636 reads
+hybracter-hybrid/processing/complete/bwa/NCPPB_2511_2.sam: 3,833,858 alignments from 3,063,434 reads
+
+Filtering for high-quality end-to-end alignments:
+  1,241,097 alignments kept
+  6,442,496 alignments discarded
+
+
+[1;4;93mPolishing assembly sequences[0m [2m(2026-10-14 20:15:18)[0m
+[2m    For each position in the assembly, Polypolish determines the read depth
+at that position and collects all aligned bases. It then polishes the assembly
+by looking for positions where the pileup unambiguously supports a different
+sequence than the assembly.[0m
+
+Polishing contig_1 (5,167,647 bp):
+  mean read depth: 16.8x
+  4,561,215 bp have a depth of zero (11.7352% coverage)
+  20,386 positions changed (0.3945% of total positions)
+  estimated pre-polishing sequence accuracy: 99.6055% (Q24.04)
+
+
+[1;4;93mFinished![0m [2m(2026-10-14 20:15:19)[0m
+Polished sequence (to stdout):
+  contig_1_polypolish (5,167,615 bp)
+
+Time to run: 0:00:23.125696
+
