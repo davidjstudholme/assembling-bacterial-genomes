@@ -43,4 +43,4 @@ JSON report: hybracter-hybrid/processing/qc/fastp/NCPPB_4430.json
 HTML report: hybracter-hybrid/processing/qc/fastp/NCPPB_4430.html
 
 fastp --in1 12297_NCPPB_4430_S366_R1_001_val_1.fq.gz --in2 12297_NCPPB_4430_S366_R2_001_val_2.fq.gz --out1 hybracter-hybrid/processing/qc/fastp/NCPPB_4430_1.fastq.gz --out2 hybracter-hybrid/processing/qc/fastp/NCPPB_4430_2.fastq.gz --html hybracter-hybrid/processing/qc/fastp/NCPPB_4430.html --json hybracter-hybrid/processing/qc/fastp/NCPPB_4430.json --thread 1 
-fastp v1.1.0, time used: 145 seconds
+fastp v1.1.0, time used: 146 seconds
